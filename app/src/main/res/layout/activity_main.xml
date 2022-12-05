@@ -135,17 +135,6 @@
                         android:hint="줄서기"
                         android:textSize="18dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="#"
-                        android:textColor="#0E65AA"
-                        android:textSize="20dp" />
-
-                    <EditText
-                        android:layout_width="75dp"
-                        android:layout_height="wrap_content"
-                        android:textSize="18dp" />
 
 
                     <TextView
