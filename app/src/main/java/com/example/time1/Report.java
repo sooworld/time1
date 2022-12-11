@@ -22,9 +22,9 @@ public class Report extends AppCompatActivity {
 
         //변수
         ImageButton btn3 = (ImageButton) findViewById(R.id.btn3);
-        year2 = findViewById(R.id.year2);
-        mon2 = findViewById(R.id.mon2);
-        day2 = findViewById(R.id.date2);
+//        year2 = findViewById(R.id.year2);
+//        mon2 = findViewById(R.id.mon2);
+//        day2 = findViewById(R.id.date2);
 
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override

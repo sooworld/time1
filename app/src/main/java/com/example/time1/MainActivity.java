@@ -26,9 +26,6 @@ public class MainActivity extends AppCompatActivity {
     Fragment fragment1;
     ImageButton btn1 = (ImageButton) findViewById(R.id.btn1);
     Button btn2 = (Button) findViewById(R.id.btn2);
-    year1 = findViewById(R.id.year1);
-    mon1 = findViewById(R.id.mon1);
-    day1 = findViewById(R.id.date1);
 
 
         btn1.setOnClickListener(new View.OnClickListener() {

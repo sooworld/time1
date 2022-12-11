@@ -10,16 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Time1">
         <activity
+            android:name=".list_view1"
+            android:exported="false" />
+        <activity
             android:name=".SearchActivity"
             android:exported="false" />
         <activity
             android:name=".report_menu"
-            android:exported="false" />
-        <activity
-            android:name=".chat"
-            android:exported="false" />
-        <activity
-            android:name=".post_detail"
             android:exported="false" />
         <activity
             android:name=".home"
