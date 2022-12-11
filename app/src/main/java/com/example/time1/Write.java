@@ -13,21 +13,47 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 public class Write extends AppCompatActivity {
-        private ListView listview;
-        private ListViewAdapter adapter;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_write_detail);
 
-        //adapter 생성\
-            adapter = new ListViewAdapter();
+
+
+        //여기 메뉴
+            findViewById(R.id.btnmenu).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(final View view) {
+                    final PopupMenu popupMenu = new PopupMenu(getApplicationContext(),view);
+
+                    getMenuInflater().inflate(R.menu.eddel,popupMenu.getMenu());
+                    popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                        @Override
+                        public boolean onMenuItemClick(MenuItem menuItem) {
+                            if (menuItem.getItemId() == R.id.btned) {
+                                Toast.makeText(Write.this, "수정을 클릭했당", Toast.LENGTH_SHORT).show();
+                            } else if (menuItem.getItemId() == R.id.btndel) {
+                                Toast.makeText(Write.this, "삭제를 클릭했당", Toast.LENGTH_SHORT).show();
+                            }
+
+                            return false;
+                        }
+                    });
+                    popupMenu.show();
+
+
+
+        //여기 댓글 리스트뷰
+
+        //adapter 생성
+                ListViewAdapter adapter = new ListViewAdapter();
         //리스트뷰 참조 및 adapter달기
-        listview = (ListView) findViewById(R.id.listView1);
+                ListView listview = (ListView) findViewById(R.id.listView1);
         listview.setAdapter(adapter);
         //listview.setOnItemClickListener(listener);
 
@@ -38,6 +64,32 @@ public class Write extends AppCompatActivity {
         adapter.addItem("닉네임5","메뉴자리5", "댓글5");
 
         adapter.notifyDataSetChanged(); //어댑터의 변경을 알림
-
         }
-}
+
+        //수정 삭제 menu.eddel에 메뉴 item있음
+//        @Override
+//        public boolean onCreateOptionsMenu(Menu menu){
+//            MenuInflater inflater1 = getMenuInflater();
+//            inflater1.inflate(R.menu.eddel, menu);
+//            return true;
+//        }
+//
+//        @Override
+//        public boolean onOptionsItemSelected(MenuItem item){
+//                switch (item.getItemId()){
+//                        case R.id.btned:
+//                                Toast.makeText(this, "너는 수정을 눌렀다", Toast.LENGTH_SHORT).show();
+//                                break;
+//                        case R.id.btndel:
+//                                Toast.makeText(this, "너는 삭제를 눌렀다",Toast.LENGTH_SHORT).show();
+//                                break;
+//                }
+//                return super.onOptionsItemSelected(item);
+
+
+
+
+
+});}}
+
+

@@ -20,26 +20,37 @@
         <ImageButton
             android:background="@null"
             android:id="@+id/btnBack"
-            android:layout_weight="0.8"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_baseline_keyboard_backspace_24" />
 
         <TextView
-            android:layout_weight="4.5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="글 확인"
             android:textColor="#000000"
             android:textSize="20dp"
-            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="115dp"/>
 
-            <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageButton
             android:id="@+id/btnmenu"
-            android:text="버튼" />
+            android:scaleType="fitCenter"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:layout_marginLeft="150dp"
+            android:src="@drawable/menu"
+            />
+
+        <!--            <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/btnmenu"-->
+<!--            android:text="버튼" />-->
 
 <!--        <Button-->
 <!--            android:id="@+id/btnedit"-->
