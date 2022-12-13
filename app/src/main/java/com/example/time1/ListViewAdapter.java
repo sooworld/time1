@@ -19,7 +19,7 @@ public class ListViewAdapter extends BaseAdapter {
 
     //adapter에 추가된 데이터를 저장하기 위한 ArrayList
 
-    private ArrayList<ListViewItem> listViewItemList = new ArrayList<ListViewItem>();
+    private final ArrayList<ListViewItem> listViewItemList = new ArrayList<ListViewItem>();
 
     //ListViewAdapter의 생성자
     public  ListViewAdapter(){
@@ -40,8 +40,8 @@ public class ListViewAdapter extends BaseAdapter {
 
         //"activity_list_view1" layout을 inflate하여 convertView참조 획득
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.listview_item, parent, false);
+            LayoutInflater inflater1 = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater1.inflate(R.layout.listview_item, parent, false);
         }
 
         //화면에 표시될 view(layout이 inflate된)으로부터 위젯에 대한 참조 획득

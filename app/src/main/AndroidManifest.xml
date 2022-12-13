@@ -19,9 +19,6 @@
             android:name=".report_menu"
             android:exported="false" />
         <activity
-            android:name=".home"
-            android:exported="false" />
-        <activity
             android:name=".Write"
             android:exported="false" />
         <activity

@@ -29,9 +29,9 @@ public class Write extends AppCompatActivity {
             findViewById(R.id.btnmenu).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(final View view) {
-                    final PopupMenu popupMenu = new PopupMenu(getApplicationContext(),view);
+                    final PopupMenu popupMenu = new PopupMenu(getApplicationContext(), view);
 
-                    getMenuInflater().inflate(R.menu.eddel,popupMenu.getMenu());
+                    getMenuInflater().inflate(R.menu.eddel, popupMenu.getMenu());
                     popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                         @Override
                         public boolean onMenuItemClick(MenuItem menuItem) {
@@ -48,16 +48,17 @@ public class Write extends AppCompatActivity {
 
 
 
+
         //여기 댓글 리스트뷰
 
         //adapter 생성
-                ListViewAdapter adapter = new ListViewAdapter();
+        ListViewAdapter adapter = new ListViewAdapter();
         //리스트뷰 참조 및 adapter달기
-                ListView listview = (ListView) findViewById(R.id.listView1);
+        ListView listview = (ListView) findViewById(R.id.listView1);
         listview.setAdapter(adapter);
         //listview.setOnItemClickListener(listener);
 
-        adapter.addItem("닉네임1","메뉴자리1", "댓글1");
+        adapter.addItem("닉네임1","날짜1", "댓글1");
         adapter.addItem("닉네임2","메뉴자리2", "댓글2");
         adapter.addItem("닉네임3","메뉴자리3", "댓글3");
         adapter.addItem("닉네임4","메뉴자리4", "댓글4");
@@ -65,29 +66,6 @@ public class Write extends AppCompatActivity {
 
         adapter.notifyDataSetChanged(); //어댑터의 변경을 알림
         }
-
-        //수정 삭제 menu.eddel에 메뉴 item있음
-//        @Override
-//        public boolean onCreateOptionsMenu(Menu menu){
-//            MenuInflater inflater1 = getMenuInflater();
-//            inflater1.inflate(R.menu.eddel, menu);
-//            return true;
-//        }
-//
-//        @Override
-//        public boolean onOptionsItemSelected(MenuItem item){
-//                switch (item.getItemId()){
-//                        case R.id.btned:
-//                                Toast.makeText(this, "너는 수정을 눌렀다", Toast.LENGTH_SHORT).show();
-//                                break;
-//                        case R.id.btndel:
-//                                Toast.makeText(this, "너는 삭제를 눌렀다",Toast.LENGTH_SHORT).show();
-//                                break;
-//                }
-//                return super.onOptionsItemSelected(item);
-
-
-
 
 
 });}}
